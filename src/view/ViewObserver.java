@@ -8,6 +8,6 @@ import graph.Graph;
 public interface ViewObserver {
     public void markVertex(int id, int color);
     public void markEdge(int id, int color);
-    public void writeFirstValueVertex(int id, String value);
-    public void writeSecondValueVertex(int id, String value);
+    public void writeFirstValueVertex(int id, String value, int color);
+    public void writeSecondValueVertex(int id, String value, int color);
 }

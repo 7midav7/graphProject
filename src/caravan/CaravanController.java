@@ -45,7 +45,7 @@ public class CaravanController {
                 int id = i * this.height + j;
                 CaravanContent content = this.graph.getVertexContent(id);
                 this.observable.writeFirstValueVertex(id,
-                        Integer.toString(content.getHeight()));
+                        Integer.toString(content.getHeight()), 0);
                 if (max < content.getHeight()){
                     max = content.getHeight();
                 }

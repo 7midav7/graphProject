@@ -7,8 +7,8 @@ import graph.GraphLoadingException;
  */
 public class Main {
     public static void main(String[] args) throws GraphLoadingException {
-        CastleController controller = new CastleController();
-        //CaravanController controller = new CaravanController();
+        //CastleController controller = new CastleController();
+        CaravanController controller = new CaravanController();
         controller.doAlgorithm();
     }
 }

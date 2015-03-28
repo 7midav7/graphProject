@@ -40,7 +40,7 @@ public class CastleController {
                 CastleContent content =
                         this.graph.getVertexContent(i * this.height + j);
                 this.observable.writeFirstValueVertex(i * this.height + j,
-                        Integer.toString(content.getTypeRoom()));
+                        Integer.toString(content.getTypeRoom()), 0);
             }
         }
 
@@ -96,7 +96,7 @@ public class CastleController {
         ++ numberRooms[color];
 
         this.observable.writeSecondValueVertex(id,
-                Integer.toString(color)
+                Integer.toString(color), 0
                 );
         this.observable.markVertex(id, 0xbbbb00);
         pause();

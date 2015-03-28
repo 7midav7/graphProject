@@ -28,15 +28,15 @@ public class Observable{
         }
     }
 
-    public void writeFirstValueVertex(int id, String value){
+    public void writeFirstValueVertex(int id, String value, int color){
         for (ViewObserver observer : listObserver){
-            observer.writeFirstValueVertex(id, value);
+            observer.writeFirstValueVertex(id, value, color);
         }
     }
 
-    public void writeSecondValueVertex(int id, String value){
+    public void writeSecondValueVertex(int id, String value, int color){
         for (ViewObserver observer : listObserver){
-            observer.writeSecondValueVertex(id, value);
+            observer.writeSecondValueVertex(id, value, color);
         }
     }
 

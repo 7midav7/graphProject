@@ -9,6 +9,8 @@ import java.awt.geom.Rectangle2D;
  */
 public class VertexBlock extends Rectangle2D.Double implements Block{
     protected Color color;
+    protected Color colorUp;
+    protected Color colorDown;
     private String valueUp;
     private String valueDown;
     protected JComponent component;
@@ -17,6 +19,8 @@ public class VertexBlock extends Rectangle2D.Double implements Block{
     public VertexBlock(Rectangle rect, int color, BorderColor bColor) {
         super(rect.x, rect.y, rect.width, rect.height);
         this.color = new Color(color);
+        this.colorUp = new Color(0);
+        this.colorDown = new Color(0);
         this.borderColor = bColor;
         this.valueUp = "";
         this.valueDown = "";
@@ -46,8 +50,9 @@ public class VertexBlock extends Rectangle2D.Double implements Block{
 
         gr2.setStroke(new BasicStroke(2));
 
-        gr2.setPaint(new Color(0));
-        gr2.drawString( valueUp, x + 20, y + 20);
+        gr2.setPaint(this.colorUp);
+        gr2.drawString(valueUp, x + 20, y + 20);
+        gr2.setPaint(this.colorDown);
         gr2.drawString( valueDown, x + 20, y + 35);
     }
 
@@ -58,14 +63,16 @@ public class VertexBlock extends Rectangle2D.Double implements Block{
     }
 
     @Override
-    public void writeFirstValue(String value) {
+    public void writeFirstValue(String value, int color) {
         this.valueUp = value;
+        this.colorUp = new Color(color);
         this.component.repaint();
     }
 
     @Override
-    public void writeSecondValue(String value) {
+    public void writeSecondValue(String value, int color) {
         this.valueDown = value;
+        this.colorDown = new Color(color);
         this.component.repaint();
     }
 

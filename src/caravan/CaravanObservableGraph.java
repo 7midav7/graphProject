@@ -1,6 +1,7 @@
 package caravan;
 
 import graph.*;
+import view.Marks;
 import view.Observable;
 
 /**
@@ -17,9 +18,9 @@ class CaravanObservableGraph extends ObservableGraph{
         super.setVertexContent(id, content);
         view.writeFirstValueVertex(id, Integer.toString(
                 ((CaravanContent) content).getHeight()
-        ));
+        ), 0);
         view.writeSecondValueVertex(id, Integer.toString(
                 ((CaravanContent) content).getLengthWay()
-        ));
+        ), Marks.nextMark(((CaravanContent) content).getHeight()));
     }
 }

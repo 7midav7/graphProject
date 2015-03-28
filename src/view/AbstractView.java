@@ -16,17 +16,17 @@ public class AbstractView implements ViewObserver{
         }
     }
 
-    public void writeFirstValueVertex(int id, String value){
+    public void writeFirstValueVertex(int id, String value, int color){
         VisualBlock block = listVertex.get(id);
         if (block != null){
-            block.writeFirstValue(value);
+            block.writeFirstValue(value, color);
         }
     }
 
-    public void writeSecondValueVertex(int id, String value){
+    public void writeSecondValueVertex(int id, String value, int color){
         VisualBlock block = listVertex.get(id);
         if (block != null){
-            block.writeSecondValue(value);
+            block.writeSecondValue(value, color);
         }
     }
 
