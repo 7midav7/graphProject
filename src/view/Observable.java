@@ -9,17 +9,24 @@ import java.util.ArrayList;
  */
 public class Observable{
 
+<<<<<<< HEAD
     protected ArrayList<ViewObserver> listObserver = new ArrayList<ViewObserver>();
+=======
+    private ArrayList<ViewObserver> listObserver = new ArrayList<ViewObserver>();
+>>>>>>> origin/master
 
     public void addObserver(ViewObserver observer ){
         listObserver.add(observer);
     }
 
+<<<<<<< HEAD
     public void init(){
         for (ViewObserver observer: listObserver){
             observer.init();
         }
     }
+=======
+>>>>>>> origin/master
 
     public void markVertex(int id, int color){
         for (ViewObserver observer : listObserver){
@@ -33,6 +40,7 @@ public class Observable{
         }
     }
 
+<<<<<<< HEAD
     public void writeFirstValueVertex(int id, String value){
         for (ViewObserver observer : listObserver){
             observer.writeFirstValueVertex(id, value);
@@ -42,6 +50,17 @@ public class Observable{
     public void writeSecondValueVertex(int id, String value){
         for (ViewObserver observer : listObserver){
             observer.writeSecondValueVertex(id, value);
+=======
+    public void writeFirstValueVertex(int id, String value, int color){
+        for (ViewObserver observer : listObserver){
+            observer.writeFirstValueVertex(id, value, color);
+        }
+    }
+
+    public void writeSecondValueVertex(int id, String value, int color){
+        for (ViewObserver observer : listObserver){
+            observer.writeSecondValueVertex(id, value, color);
+>>>>>>> origin/master
         }
     }
 

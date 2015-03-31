@@ -1,6 +1,9 @@
 package view;
 
+<<<<<<< HEAD
 import javax.swing.*;
+=======
+>>>>>>> origin/master
 import java.util.ArrayList;
 
 /**
@@ -9,9 +12,13 @@ import java.util.ArrayList;
 public class AbstractView implements ViewObserver{
     private ArrayList<VisualBlock> listVertex = new ArrayList<VisualBlock>();
     private ArrayList<VisualBlock> listEdge = new ArrayList<VisualBlock>();
+<<<<<<< HEAD
     private ViewInitable viewInitable;
 
     @Override
+=======
+
+>>>>>>> origin/master
     public void markVertex(int id, int color){
         VisualBlock block = listVertex.get(id);
         if (block != null){
@@ -19,6 +26,7 @@ public class AbstractView implements ViewObserver{
         }
     }
 
+<<<<<<< HEAD
     @Override
     public void init() {
         viewInitable.init();
@@ -41,6 +49,22 @@ public class AbstractView implements ViewObserver{
     }
 
     @Override
+=======
+    public void writeFirstValueVertex(int id, String value, int color){
+        VisualBlock block = listVertex.get(id);
+        if (block != null){
+            block.writeFirstValue(value, color);
+        }
+    }
+
+    public void writeSecondValueVertex(int id, String value, int color){
+        VisualBlock block = listVertex.get(id);
+        if (block != null){
+            block.writeSecondValue(value, color);
+        }
+    }
+
+>>>>>>> origin/master
     public void markEdge(int id, int color){
         VisualBlock block = listEdge.get(id);
         if (block != null){
@@ -63,6 +87,7 @@ public class AbstractView implements ViewObserver{
     public void addEdgeBlock(int id){
         listEdge.remove(id);
     }
+<<<<<<< HEAD
 
     public ViewInitable getViewInitable() {
         return viewInitable;
@@ -71,4 +96,6 @@ public class AbstractView implements ViewObserver{
     public void setViewInitable(ViewInitable viewInitable) {
         this.viewInitable = viewInitable;
     }
+=======
+>>>>>>> origin/master
 }

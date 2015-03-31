@@ -32,13 +32,21 @@ public class EdgeBlock extends Rectangle2D.Double implements Block{
     }
 
     @Override
+<<<<<<< HEAD
     public void writeFirstValue(String value) {
+=======
+    public void writeFirstValue(String value, int Color) {
+>>>>>>> origin/master
         this.valueUp = value;
         jComponent.repaint();
     }
 
     @Override
+<<<<<<< HEAD
     public void writeSecondValue(String value) {
+=======
+    public void writeSecondValue(String value, int Color) {
+>>>>>>> origin/master
         this.valueDown = value;
         jComponent.repaint();
     }
